@@ -29,8 +29,9 @@ func newEncoder(cfg zap.Config) (zapcore.Encoder, error) {
 	case "json":
 		return zapcore.NewJSONEncoder(cfg.EncoderConfig), nil
 	}
-	return nil, errors.New("failed to set encoder asdsadasdsada")
+	return nil, errors.New("asda")
 }
+
 
 func openWriters(cfg *Config) (zapcore.WriteSyncer, zapcore.WriteSyncer) {
 	writer := open(cfg.ZapConfig.OutputPaths, &cfg.LogRotate)
