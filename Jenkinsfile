@@ -19,7 +19,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    def imag = docker.build("myapp:1.1")
+                    def imag = docker.build("mohammd1x/myapp:1.1")
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhubC') {
                         imag.push('latest')
                     }
