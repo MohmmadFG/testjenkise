@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        go 'golastversin'
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -9,17 +11,12 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                echo 'Building project.. sdadsada.'
-                // يمكن هنا إضافة أوامر البناء مثل mvn build أو npm build
-            }
-        }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // هنا يمكن وضع أوامر تشغيل الاختبارات
+                sh 'go test ./...'
+                echo "test succes"
             }
         }
     }
