@@ -29,7 +29,7 @@ func newEncoder(cfg zap.Config) (zapcore.Encoder, error) {
 	case "json":
 		return zapcore.NewJSONEncoder(cfg.EncoderConfig), nil
 	}
-	return nil, errors.New("fffff")
+	return nil, errors.New("ssssssss")
 }
 
 
