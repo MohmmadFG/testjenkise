@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building project...'
+                echo 'Building project.. sdadsada.'
                 // يمكن هنا إضافة أوامر البناء مثل mvn build أو npm build
             }
         }
